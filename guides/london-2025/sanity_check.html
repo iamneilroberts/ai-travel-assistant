@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    :root {
+        --text-primary: #2d3748;
+        --text-secondary: #4a5568;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f7fafc;
+        --accent: #2c5282;
+        --border: #e2e8f0;
+        --warning: #ed8936;
+        --success: #48bb78;
+        --error: #e53e3e;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --text-primary: #f7fafc;
+            --text-secondary: #e2e8f0;
+            --bg-primary: #1a202c;
+            --bg-secondary: #2d3748;
+            --accent: #90cdf4;
+            --border: #4a5568;
+        }
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+    }
+
+    .header {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--border);
+    }
+
+    .section {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: var(--bg-secondary);
+        border-radius: 8px;
+    }
+
+    .check-item {
+        display: flex;
+        align-items: flex-start;
+        margin: 10px 0;
+        padding: 5px;
+    }
+
+    .icon {
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+
+    .success-icon {
+        color: var(--success);
+    }
+
+    .warning-icon {
+        color: var(--warning);
+    }
+
+    .error-icon {
+        color: var(--error);
+    }
+
+    .urgent {
+        background-color: rgba(229, 62, 62, 0.1);
+        border-left: 4px solid var(--error);
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .warning {
+        background-color: rgba(237, 137, 54, 0.1);
+        border-left: 4px solid var(--warning);
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .success {
+        background-color: rgba(72, 187, 120, 0.1);
+        border-left: 4px solid var(--success);
+        padding: 10px;
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Trip Sanity Check Report</h1>
+    <h2>Sara & Darren's 25th Anniversary</h2>
+    <p>Generated: January 31, 2025</p>
+</div>
+
+<div class="section">
+    <h2>🕒 Timing Checks</h2>
+    
+    <div class="success">
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Flight arrival and car pickup timing reasonable</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Daily activity pacing appropriate</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Meal times appropriately spaced</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Train connections have adequate buffer time</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Check-in/out times aligned with arrival/departure</span>
+        </div>
+    </div>
+    
+    <div class="warning">
+        <div class="check-item">
+            <span class="icon warning-icon">⚠</span>
+            <span>Tower of London timing tight - recommend 2.5-3 hours minimum</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>🏨 Accommodation Checks</h2>
+    
+    <div class="success">
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>No gaps in accommodation dates</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Bath hotel location optimal for activities</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Parking available at all locations</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Room type suitable for couple</span>
+        </div>
+    </div>
+    
+    <div class="warning">
+        <div class="check-item">
+            <span class="icon warning-icon">⚠</span>
+            <span>Cotswolds cottage still needs selection</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>🚗 Transportation Checks</h2>
+    
+    <div class="success">
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Car rental dates match itinerary</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Train tickets can be pre-booked</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Parking arrangements confirmed for Bath</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Distance calculations realistic</span>
+        </div>
+    </div>
+    
+    <div class="warning">
+        <div class="check-item">
+            <span class="icon warning-icon">⚠</span>
+            <span>Park & Ride details needed for Oxford day trip</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>📋 Booking Status</h2>
+    
+    <div class="urgent">
+        <h3>❗ Requires Immediate Action:</h3>
+        <ul>
+            <li>Cotswolds cottage selection</li>
+            <li>Tour bookings confirmation</li>
+            <li>Train ticket bookings (when available)</li>
+            <li>Dinner reservations</li>
+            <li>Initial deposit processing</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>😊 Comfort Checks</h2>
+    
+    <div class="success">
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>No heights involved in activities</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Walking distances within stated preferences</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Dining styles match preferences</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Adequate free time built in</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Weather contingency options available</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>🎯 Special Requirements</h2>
+    
+    <div class="success">
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Literary focus maintained throughout</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Church music opportunities included</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Shopping time allocated</span>
+        </div>
+        <div class="check-item">
+            <span class="icon success-icon">✓</span>
+            <span>Tea experiences included</span>
+        </div>
+    </div>
+    
+    <div class="warning">
+        <div class="check-item">
+            <span class="icon warning-icon">⚠</span>
+            <span>Consider adding more bargain shopping opportunities</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>📝 Documentation Needs</h2>
+    
+    <div class="urgent">
+        <h3>❗ Required Before Travel:</h3>
+        <ul>
+            <li>Passport copies</li>
+            <li>Insurance documentation</li>
+            <li>Emergency contact sheet</li>
+            <li>Detailed maps for each location</li>
+            <li>Restaurant reservation confirmations</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>📌 Recommended Adjustments</h2>
+    <ol>
+        <li>Extend Tower of London visit by 30 minutes</li>
+        <li>Add specific Park & Ride information for Oxford</li>
+        <li>Include alternative indoor activities for rain</li>
+        <li>Add more shopping opportunities in Cotswolds</li>
+        <li>Create detailed maps for village walks</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>⚡ Urgent Next Steps</h2>
+    <div class="urgent">
+        <ol>
+            <li>Select and book Cotswolds cottage</li>
+            <li>Confirm all tour bookings</li>
+            <li>Process initial deposit</li>
+            <li>Create emergency contact sheet</li>
+            <li>Begin train ticket monitoring for booking</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
