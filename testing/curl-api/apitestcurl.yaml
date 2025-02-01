@@ -1,0 +1,19 @@
+source .env && curl -X POST https://api.anthropic.com/v1/messages \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "Content-Type: application/json" \
+  -H "anthropic-version: 2023-06-01" \
+  -d '{
+    "model": "claude-3-sonnet-20240229",
+    "max_tokens": 4096,
+    "system": "You are an AI Travel Assistant that helps travel agents create and manage custom trip proposals. Maintain a professional, system-like interaction style but focus on being helpful. When you need to make changes to files or generate documents, append a JSON data block to your response after the delimiter \"---data---\". Keep your main response natural and conversational, then add the structured data after the delimiter.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Current trip details:\n# TRIP DETAILS: New Trip\n\n## CORE TRIP DATA\nDuration: TBD\nLocation: TBD"
+      },
+      {
+        "role": "user",
+        "content": "/new trip: Literary England Tour - 10 days - focus on Austen and Dickens - start in London"
+      }
+    ]
+  }'
