@@ -3,121 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Guides</title>
+    <title>European Family Adventure - Daily Itinerary</title>
     <style>
-        :root {
-            --primary-color: #2154a0;
-            --bg-color: #f8fafc;
-            --text-color: #333;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.5;
-            color: var(--text-color);
-            background: var(--bg-color);
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+            padding: 16px;
         }
-        .header {
-            background: var(--primary-color);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            text-align: center;
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        .guide-list {
-            list-style: none;
-        }
-        .guide-card {
+        
+        section {
             background: white;
             border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
-        .guide-link {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 12px;
         }
-        .guide-icon {
-            width: 24px;
-            height: 24px;
+        
+        h2 {
+            font-size: 20px;
+            margin: 20px 0 12px;
+            color: #1a1a1a;
         }
-        .date {
-            font-size: 0.9rem;
+        
+        h3 {
+            font-size: 16px;
             color: #666;
-            margin-top: 0.25rem;
+            margin-top: 20px;
+        }
+
+        .day {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        
+        .price {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .total {
+            background: #e3f2fd;
+            color: #1565c0;
+            font-size: 18px;
+            padding: 8px 16px;
+            margin: 16px 0;
+        }
+
+        .location {
+            border-top: 2px solid #eee;
+            padding-top: 24px;
+            margin-top: 24px;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .time {
+            color: #666;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            background: #fff3e0;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+        .activity {
+            margin: 12px 0;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .activity:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-left: 4px;
+        }
+
+        .hotel {
+            background: #f0f4f8;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 8px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1 class="title">Travel Guides</h1>
+    <div class="container">
+        <section>
+            <h1>European Family Adventure</h1>
+            <div class="meta">11 Days | 4 Travelers | Summer 2025</div>
+            <div class="total">Total: $15,500 ($3,875 per person)</div>
+            
+            <ul style="margin-top: 16px">
+                <li>Flights: <span class="price">$5,100</span></li>
+                <li>Rail Travel: <span class="price">$2,650</span></li>
+                <li>Hotels: <span class="price">$4,800</span></li>
+                <li>Activities: <span class="price">$2,540</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>London</h2>
+            <div class="hotel">
+                <a href="https://www.strandpalacehotel.co.uk" target="_blank">Strand Palace Hotel</a>
+                <span class="price">$1,200</span>
+                <div class="meta">Superior Room | 2 Nights | Near Covent Garden</div>
+            </div>
+
+            <div class="day">
+                <h3>Day 1</h3>
+                <div class="activity">
+                    <div>Hotel Check-in</div>
+                    <div class="time">After 3:00 PM</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://westminster-abbey.org/visit-us" target="_blank">Westminster Walking Tour</a>
+                        <span class="price">$180</span>
+                    </div>
+                    <div class="time">4:00 PM | Historical landmarks tour</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://rules.co.uk" target="_blank">Dinner at Rules</a>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <div class="time">7:30 PM | Oldest restaurant in London</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <h3>Day 2</h3>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.londoneye.com" target="_blank">London Eye Fast Track</a>
+                        <span class="price">$180</span>
+                    </div>
+                    <div class="time">10:00 AM | Panoramic views</div>
+                </div>
+                <div class="activity">
+                    <div>Afternoon at leisure</div>
+                    <div class="time">Suggested: <a href="https://www.hrp.org.uk/tower-of-london" target="_blank">Tower of London</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Paris</h2>
+            <div class="hotel">
+                <a href="https://www.ihg.com/holidayinn/hotels/gb/en/paris/parst/hoteldetail" target="_blank">Holiday Inn Paris Gare de l'Est</a>
+                <span class="price">$1,100</span>
+                <div class="meta">Family Room | 2 Nights | Near train station</div>
+            </div>
+
+            <div class="day">
+                <h3>Day 3</h3>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.eurostar.com" target="_blank">Eurostar to Paris</a>
+                    </div>
+                    <div class="time">Morning | 2h15m journey</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.vedettesdupontneuf.com" target="_blank">Seine River Cruise</a>
+                        <span class="price">$200</span>
+                    </div>
+                    <div class="time">4:00 PM | Scenic city views</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.le-train-bleu.com" target="_blank">Dinner at Le Train Bleu</a>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <div class="time">8:00 PM | Belle Époque splendor</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <h3>Day 4</h3>
+                <div class="activity">
+                    <div>Paris Exploration</div>
+                    <div class="time">Morning suggestions:
+                        <br>• <a href="https://www.louvre.fr/en" target="_blank">Louvre Museum</a>
+                        <br>• <a href="https://www.toureiffel.paris" target="_blank">Eiffel Tower</a>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div>Evening Departure</div>
+                    <div class="time">8:00 PM | <a href="https://www.nightjet.com" target="_blank">Nightjet</a> sleeper train to Vienna</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vienna</h2>
+            <div class="hotel">
+                <a href="https://www.austria-trend.at/en/hotels/europa-wien" target="_blank">Austria Trend Hotel Europa Wien</a>
+                <span class="price">$1,200</span>
+                <div class="meta">Executive Room | 2 Nights | City center</div>
+            </div>
+
+            <div class="day">
+                <h3>Day 5</h3>
+                <div class="activity">
+                    <div>Arrival & Check-in</div>
+                    <div class="time">Morning arrival | Room from 2:00 PM</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.musikverein.at/en" target="_blank">Mozart Concert</a>
+                        <span class="price">$280</span>
+                    </div>
+                    <div class="time">7:30 PM | Golden Hall</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <h3>Day 6</h3>
+                <div class="activity">
+                    <div>Vienna Exploration</div>
+                    <div class="time">Suggested visits:
+                        <br>• <a href="https://www.schoenbrunn.at/en" target="_blank">Schönbrunn Palace</a>
+                        <br>• <a href="https://www.belvedere.at/en" target="_blank">Belvedere</a>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://steirereck.at/en" target="_blank">Dinner at Steirereck</a>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <div class="time">7:00 PM | Modern Austrian cuisine</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Rome</h2>
+            <div class="hotel">
+                <a href="https://www.hotelnordnuovaroma.it" target="_blank">Hotel Nord Nuova Roma</a>
+                <span class="price">$1,300</span>
+                <div class="meta">Quadruple Room | 3 Nights | Near Termini</div>
+            </div>
+
+            <div class="day">
+                <h3>Day 7</h3>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.trenitalia.com" target="_blank">Train to Rome</a>
+                    </div>
+                    <div class="time">Morning | First class Trenitalia</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.viator.com/tours/Rome/Rome-by-Golf-Cart-Private-Tour/d511-7377P1" target="_blank">Rome by Golf Cart Private Tour</a>
+                        <span class="price">$400</span>
+                    </div>
+                    <div class="time">4:00 PM | City highlights tour</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.roscioli.com/restaurant" target="_blank">Dinner at Roscioli</a>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <div class="time">8:00 PM | Roman cuisine</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <h3>Day 8</h3>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.parcocolosseo.it/en" target="_blank">Colosseum Tour</a>
+                        <span class="price">$240</span>
+                    </div>
+                    <div class="time">9:00 AM | Ancient Rome exploration</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.museivaticani.va" target="_blank">Vatican Museums</a>
+                        <span class="price">$200</span>
+                    </div>
+                    <div class="time">2:00 PM | Including Sistine Chapel</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <h3>Day 9 - Florence Day Trip</h3>
+                <div class="activity">
+                    <div>High-speed train to Florence</div>
+                    <div class="time">Early Morning</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.uffizi.it/en" target="_blank">Uffizi Gallery</a>
+                        <span class="price">$240</span>
+                    </div>
+                    <div class="time">10:00 AM | Renaissance masterpieces</div>
+                </div>
+                <div class="activity">
+                    <div>Walking Tour <span class="price">$320</span></div>
+                    <div class="time">2:00 PM | City highlights</div>
+                </div>
+                <div class="activity">
+                    <div>
+                        <a href="https://www.ristorantelagiostra.com" target="_blank">Dinner at La Giostra</a>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <div class="time">8:00 PM | Tuscan excellence</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Important Notes</h2>
+            <div class="alert">
+                <ul>
+                    <li>UK ETA required for London (£10 pp, apply 3+ days before)</li>
+                    <li>EU ETIAS required (€7 pp, apply 30+ days before)</li>
+                    <li>All restaurant reservations must be made in advance</li>
+                    <li>Local taxes additional at hotels</li>
+                    <li>Tours include skip-the-line access</li>
+                </ul>
+            </div>
+        </section>
     </div>
-    <ul class="guide-list">
-        <li class="guide-card">
-            <a href="guides/london-2025/full-trip-mobile.html" class="guide-link">
-                <svg class="guide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                Full Trip Guide
-            </a>
-            <div class="date">October 15, 2025</div>
-        </li>
-        <li class="guide-card">
-            <a href="guides/london-2025/mobile.html" class="guide-link">
-                <svg class="guide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                London Day Trip Guide
-            </a>
-            <div class="date">October 10, 2025</div>
-        </li>
-        <li class="guide-card">
-            <a href="guides/london-2025/proposal.html" class="guide-link">
-                <svg class="guide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                </svg>
-                London Proposal Guide
-            </a>
-            <div class="date">October 12, 2025</div>
-        </li>
-        <li class="guide-card">
-            <a href="guides/london-2025/bath_details.html" class="guide-link">
-                <svg class="guide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 12h18M3 6h18M3 18h18"/>
-                </svg>
-                Bath Day Trip Details
-            </a>
-            <div class="date">October 13, 2025</div>
-        </li>
-        <li class="guide-card">
-            <a href="guides/london-2025/sanity_check.html" class="guide-link">
-                <svg class="guide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 12l2 2 4-4"/>
-                    <circle cx="12" cy="12" r="10"/>
-                </svg>
-                Sanity Check
-            </a>
-            <div class="date">October 20, 2025</div>
-        </li>
-    </ul>
 </body>
 </html>
